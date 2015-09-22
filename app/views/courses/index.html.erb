@@ -1,4 +1,4 @@
-<h1>Searching for - <%= @search_term %></h1>
+<h1>Searching for: <%= @search_term %></h1>
 
 <table border="1">
   <tr>
@@ -9,7 +9,7 @@
   <% @courses.each do |course| %>
     <tr class=<%= cycle('even', 'odd') %>>
       <td><%= image_tag(course["smallIcon"])%></td>
-      <td><%= course["name"] %></td>
+      <td><%= link_to course["name"], "https://coursera.org/course/" + course["shortName"], :target => '_blank' %></td>
       <td><%= course["shortDescription"] %></td>
     </tr>
   <% end %>
