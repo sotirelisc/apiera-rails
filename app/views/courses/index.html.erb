@@ -12,7 +12,7 @@ No results found!
   <% @courses.each do |course| %>
     <tr class=<%= cycle('even', 'odd') %>>
       <td><%= image_tag(course["smallIcon"])%></td>
-      <td><%= link_to course["name"], "https://coursera.org/course/" + course["shortName"], :target => '_blank' %></td>
+      <td class="title"><%= link_to course["name"], "https://coursera.org/course/" + course["shortName"], :target => '_blank' %></td>
       <td><%= course["shortDescription"] %></td>
     </tr>
   <% end %>
