@@ -1,5 +1,11 @@
 <h1>Searching for: <%= @search_term %></h1>
 
+<%= form_tag(root_path, method: "get") do %>
+  <%= label_tag(:looking_for, "Search for:") %>
+  <%= text_field_tag(:looking_for) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 <% if @courses.nil? %>
 No results found!
 <% else %>
